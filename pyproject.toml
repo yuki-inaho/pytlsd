@@ -8,9 +8,36 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "pytlsd"
+version = "0.0.5"
+description = "Transparent bindings of LSD (Line Segment Detector)"
+authors = [
+    {name = "Iago Suarez", email = "iagoh92@gmail.com"}
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.19.5",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "opencv-python>=4.5.2.54",
+    "scipy>=1.5.4",
+    "scikit-image>=0.17.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/yuki-inaho/pytlsd"
+Repository = "https://github.com/yuki-inaho/pytlsd.git"
+Original = "https://github.com/iago-suarez/pytlsd"
+
 [tool.mypy]
 files = "setup.py"
-python_version = "3.7"
+python_version = "3.9"
 strict = true
 show_error_codes = true
 enable_error_code = ["ignore-without-code", "redundant-expr", "truthy-bool"]
